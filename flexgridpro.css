@@ -180,8 +180,10 @@ transition: .6s;
     text-decoration: none;
     background-color: transparent !important;
     border: 0;
+    padding: 0 !important;
 }
 .bton .joinus a{
+    padding: 0;
     color:var(--secondary) !important;
 
 }
@@ -1258,9 +1260,9 @@ footer{
         font-size: 15px;
     }
     .header{
-        .joinus{
+        /* .joinus{
             display: none;
-        }
+        } */
         .btn{
             padding:10px 10px;
         }
