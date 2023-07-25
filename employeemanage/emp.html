@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>employees</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">    
+    <link rel="stylesheet" href="emp.css">
+
+</head>
+<body>
+    <div class="wraper">
+        <input type="checkbox" id="checking">
+        <label for="checking"><i class="fa-solid fa-bars"></i></label>
+        <div class="menu">
+            <div class="logo"><h3>Employee<br><p>Management</p></h3></div>
+            <div class="pages">
+                <h6><a href="#"><i class="fa-solid fa-house"></i>Dashboard</a></h6>
+                <h6><a href="#"><i class="fa-solid fa-chart-simple"></i>Employees</a></h6>
+                <h6><a href="#"><i class="fa-solid fa-user"></i>My Profile</a></h6>
+                <h6><a href="#"><i class="fa-solid fa-lock"></i>Logout</a></h6>
+            </div>
+            <footer class="footer">
+                powerded by
+                <img src="img/image 1.png" alt="">
+            </footer>
+        </div>
+
+
+        
+        <div class="emppage ">
+            <div class="userlogo">
+                <div class="userheader">
+                    <p>Dashboard / Employees</p>
+                    <h1>Employees</h1>
+                </div>
+                <div class="search">
+                    <input id="sbar" type="search" placeholder="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-regular fa-bell"></i>
+                    <div class="img">
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="containerone  py-3 px-0">
+                <div class="row1 p-3">
+                    <div class="employlist p-0">
+                        <!-- <div class="logo"><h3>Employees List</h3> -->
+                            <div class="emp ">
+                                <label for="salutation" class="form-label salutation "><h4 class="text-primary-emphasis">Employees List</h4></label>
+                                <select id="pag"class="form-select" aria-label="Default select example">
+                                    <option selected>1</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                <h6>of n</h6>
+                            </div>
+                            <div class=" ps-4">
+                                <button type="button" class="btn btn-primary sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    Add Employee
+                                  </button>
+                            </div>
+                    </div>
+                        
+                </div>
+            <div class="table-responsive bg-white">
+                <table class="table bg-white">
+                    <thead>
+                        <tr>
+                            <th class="tbl"cope="col">SI.No</th>
+                            <th class="tbl"scope="col"> Name</th>
+                            <th class="tbl"scope="col">Email</th>
+                            <th class="tbl"scope="col">Phone</th>
+                            <th class="tbl"scope="col">Gender</th>
+                            <th class="tbl"scope="col">State</th>
+                            <th class="tbl"scope="col">Country</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="EmpTable">
+                        <tr class="details">
+                            <td></td>
+                            <td class="user"><div class="employee"></div></td>           <!-- <img src="img/Rectangle 347.png"> -->
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    
+                        <!--  -->
+                    </tbody>
+                    
+                      
+                </table>
+            </div>
+
+            <!-- </div> -->
+            <nav aria-label="Page navigation example">
+                <ul class="pagination mt-3 mb-3">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+        </div>
+        <footer class=" footr">
+            © 2023  All Rights Reserved. Stackup
+            <div class="tc">
+                <div class="terms"><a href="#">Terms of Use</a></div>
+                <div class="condition"><a href="#">Privacy Policy</a></div>
+            </div>
+          </footer>
+    </div>
+
+
+
+    <!-- ========================================= emp table end ============================= -->
+    <!-- +++++++++++++++++++++++++++++++++++++ emp form add start +++++++++++++++++++++++++++++++++++ -->
+    
+      
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header b-0">
+                <header><h4>Basic Details</h4></header>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+
+
+
+                <form  id="main" class="col-8 main  bg-white " name="userform" method="post"  onsubmit="return validation()" >
+                    <!-- <header><h4>Basic Details</h4><i class="fa-solid fa-xmark"></i></header> -->
+                    <div class="card">
+                        <div class="card-body">
+                        <input class="form-control fileup" type="file" id="formFile">
+                      </div>
+                      <div class="upload">
+                        <i class="fa-solid fa-file-arrow-up text-primary"></i> 
+                        <h6 class="text-primary">Upload Image</h6> 
+                        <h6 class="png">PNG, JPG files are allowed</h6>
+                    </div>
+                    </div>
+                    <div class="row input">
+                        <div class="col-3  imp">
+                            <label for="user" class="form-label salutation ">Salutation<span class="text-danger">*</span></label>
+                                <select id="user" class="form-label mb-0  selections"  name="userlist" form="userform">
+                                <!-- <option class="select " selected>select</option> -->
+                                <option value="mr" selected>Mr</option>
+                                <option value="mrs">Mrs</option>
+                                <option value="dr">Dr</option>
+                                <option value="adv">Adv</option>
+                                <option value="adv">Other</option>
+                            </select>
+                        </div>
+                        <!-- <label for="exampleInputEmail1">Email address</label> -->
+                        <div class="col imp" id="imp">
+                            <label for="validationCustom01" class="form-label">First name<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="validationCustom01" name="myfname" placeholder="joe" autocomplete="off">
+                            <!-- <input placeholder="Enter search term" aria-label="Enter search term"> -->
+                            <!-- <div class="valid-feedback">
+                              Looks good!
+                            </div> -->
+                        </div>
+                        <div class="col imp">
+                            <label for="validationCustom02" class="form-label">Last name<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="validationCustom02" placeholder="doe"aria-label="Enter search term" >
+                            <div class="valid-feedback">
+                             Looks good!
+                        </div>
+                        </div>
+                     </div>
+                     <div class="row input">
+                        <div class="col imp">
+                            <label for="Email1" class="form-label">Email address<span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="Email1"  placeholder="example@gmail.com">
+                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                        </div>
+                        <div class="col imp">
+                            <label for="typePhone" class="form-label">Mobile number<span class="text-danger">*</span></label>
+                            <input type="tel" id="typePhone" class="form-control"placeholder="Enter Phone" />
+                        </div>
+                     </div>
+
+                     <div class="row input">
+                        <div class="col imp">
+                            <label for="username" class="form-label">username<span class="text-danger">*</span></label>
+                            <input type="username" class="form-control" id="username" aria-describedby="emailHelp" placeholder="enter pass">
+                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                        </div>
+                        <div class="col imp">
+                            <label for="password" class="form-label">password<span class="text-danger">*</span></label>
+                            <input type="password" id="password" class="form-control"placeholder="Enter password" />
+                        </div>
+                     </div>
+
+
+
+
+
+                     <div class="row input">
+                        <div class="col-6 imp"> 
+                            <label for="date" class="form-label text-capitalize">Date of Birth<span class="text-danger">*</span></label>
+                                <input id="date" class="form-control" type = "date" name = "date" >  
+                        </div> 
+                        <div class="col imp radio">
+                            <div class="row gap">
+                                <label for="Gender" class="form-label imp">Gender<span class="text-danger">*</span></label>
+                                <div class="col gap" id="radio">
+                                    <input class="form-check-input Gender" type="radio" name="Gender" value="male" id="flexRadioDefault1"checked><label class="form-label">Male</label>
+                                    <input class="form-check-input Gender" type="radio" name="Gender" value="female" id="flexRadioDefault2" ><label class="form-label">Female</label>      
+                                    <!-- <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >Other       -->
+    
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        </div>
+
+
+                        <div class="col-12">
+                            <label for="Qualification" class="form-label">Qualification<span class="text-danger">*</span></label>
+                            <input type="text" id="Qualification" class="form-control"name="Qualification" placeholder="Enter Qualification" />
+    
+                        </div>
+
+                        <div class="col-12">
+                            <label for="exampleInputEmail1" class="form-label">Address<span class="text-danger">*</span></label>
+                            <input type="text" id="homename" class="form-control"name="address" placeholder="Enter Adderss" />
+    
+                        </div>
+
+
+
+
+                        
+                        <div class="row input">
+                            <div class="col imp">
+                                <label for="exampleInputEmail1" class="form-label">Country<span class="text-danger">*</span></label>
+                                <select id="Country"  name="carlist" form="carform" class="selections">
+                                    <!-- <option class="select" selected>select Country</option> -->
+                                    <option value="India" selected>India</Ioption>
+                                    <option value="America">America</option>
+                                    <option value="Jappan">Jappan</option>
+                                    <option value="UK">UK</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="col imp">
+                                <label for="exampleInputEmail1" class="form-label">State<span class="text-danger">*</span></label>
+                                <select id="state"  name="carlist" form="carform" class="selections">
+                                    <!-- <option class="select" selected>select state</option> -->
+                                    <option value="Kerala" selected>Kerala</option>
+                                    <option value="TamilNadu">TamilNadu</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Bangloor">Bangloor</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row input">
+                            <div class="col imp">
+                                <label for="city" class="form-label">City<span class="text-danger">*</span></label>
+                                <input type="text" id="city" class="form-control"placeholder="Enter City" />
+                            </div>
+                            <div class="col imp">
+                                <label for="Pin/Zip" class="form-label">Pin/Zip<span class="text-danger">*</span></label>
+                                <input type="text" id="pin" class="form-control"placeholder="Pin/Zip" />
+                            </div>
+                        </div>
+                    <!-- </form>  -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn text-primary me-sm-2" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary py-3">add employee</button>
+                </div>
+            </form> 
+            </div> 
+            
+            </div>
+            </div> 
+        <!-- <br>  -->
+
+
+
+                <!-- +++++++++++++++++++++++++++++++++++++ emp form add start +++++++++++++++++++++++++++++++++++ -->
+   
+
+
+                
+
+            <div class="modal fade" id="viewempmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header b-0">
+                        <header><h4>Edit Emploee</h4></header>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0">
+
+
+
+
+
+            <form class="col-8 main  bg-white "id="formupdate">
+                <!-- <header><h4>Edit Emploee</h4><i class="fa-solid fa-xmark"></i></header> -->
+                <div class=" employeeimg">
+                    <div class="empimage">
+                        <div class="empimg">
+                            <img src="img/emp.png" alt="">
+                        </div>                  
+                    </div>
+                    <button class="change">change</button>
+                </div>
+                <div class="row input">
+                    <div class="col-3  imp">
+                        <label for="salutation" class="form-label salutation ">Salutation<span class="text-danger">*</span></label>
+                            <select id="user" class="form-label mb-0 selections"  name="userlist" form="userform">
+                            <!-- <option class="select " selected>select</option> -->
+                            <option value="mr">Mr</option>
+                            <option value="mrs">Mrs</option>
+                            <option value="dr">Dr</option>
+                            <option value="adv">Adv</option>
+                            <option value="adv">Other</option>
+                        </select>
+                    </div>
+                    <!-- <label for="exampleInputEmail1">Email address</label> -->
+                    <div class="col imp">
+                        <label for="validationCustom01" class="form-label">First name<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="validation01" placeholder="joe" required>
+                        <!-- <input placeholder="Enter search term" aria-label="Enter search term"> -->
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                    </div>
+                    <div class="col imp">
+                        <label for="validationCustom02" class="form-label">Last name<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="validation02" placeholder="doe"aria-label="Enter search term" required>
+                        <div class="valid-feedback">
+                         Looks good!
+                    </div>
+                    </div>
+                 </div>
+                 <div class="row input">
+                    <div class="col imp">
+                        <label for="exampleInputEmail1" class="form-label">Email address<span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" area>
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                    </div>
+                    <div class="col imp">
+                        <label for="typePhone" class="form-label">Mobile number<span class="text-danger">*</span></label>
+                        <input type="phone" id="typephone" class="form-control"placeholder="Enter Phone" />
+                    </div>
+                 </div>
+
+
+                 <div class="row input">
+                    <div class="col imp">
+                        <label for="username" class="form-label">username<span class="text-danger">*</span></label>
+                        <input type="username" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="enter pass">
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                    </div>
+                    <div class="col imp">
+                        <label for="password" class="form-label">password<span class="text-danger">*</span></label>
+                        <input type="password" id="Password" class="form-control"placeholder="Enter password" />
+                    </div>
+                 </div>
+
+
+
+
+
+                 <div class="row input">
+                    <div class="col-6 imp"> 
+                        <label for="date" class="form-label text-capitalize">Date of Birth<span class="text-danger">*</span></label>
+                            <input class="form-control" type = "date" name = "date" id="date">  
+                    </div> 
+                    <div class="col imp radio">
+                        <div class="row gap">
+                            <label for="exampleInputEmail1" class="form-label imp">Gender<span class="text-danger">*</span></label>
+                            <div class="col gap">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"checked><label class="form-label">Male</label>
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" ><label class="form-label">Female</label>      
+                                <!-- <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >Other       -->
+
+                            </div>
+                        </div>
+                        
+                    </div>
+
+
+
+
+                    <div class="col-12">
+                        <label for="Qualification" class="form-label">Qualification<span class="text-danger">*</span></label>
+                        <input type="text" id="qualification" class="form-control"name="Qualification" placeholder="Enter Qualification" />
+
+                    </div>
+
+
+
+
+                    </div>
+                    <div class="col-12">
+                        <label for="exampleInputEmail1" class="form-label">Address<span class="text-danger">*</span></label>
+                        <input type="text" id="form7Example4" class="form-control"placeholder="Enter Adderss" />
+
+                    </div>
+                    <div class="row input">
+                        <div class="col imp">
+                            <label for="exampleInputEmail1" class="form-label">Country<span class="text-danger">*</span></label>
+                            <select id="Country"  name="carlist" form="carform" class="selections">
+                                <!-- <option class="select" selected>select Country</option> -->
+                                <option value="India" selected>India</Ioption>
+                                    <option value="America">America</option>
+                                    <option value="Jappan">Jappan</option>
+                                    <option value="UK">UK</option>
+                                    <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="col imp">
+                            <label for="exampleInputEmail1" class="form-label">State<span class="text-danger">*</span></label>
+                            <select id="state"  name="carlist" form="carform" class="selections">
+                                <!-- <option class="select" selected>select state</option> -->
+                                <option value="Kerala" selected>Kerala</option>
+                                <option value="TamilNadu">TamilNadu</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Bangloor">Bangloor</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row input">
+                        <div class="col imp">
+                            <label for="city" class="form-label">City<span class="text-danger">*</span></label>
+                            <input type="text" id="City" class="form-control"placeholder="Enter City" />
+                        </div>
+                        <div class="col imp">
+                            <label for="Pin" class="form-label">Pin/Zip<span class="text-danger">*</span></label>
+                            <input type="text" id="pinno" class="form-control"placeholder="Pin/Zip" />
+                        </div>
+                    </div>
+               
+
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn text-primary me-sm-2" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary py-3">Save Changes</button>
+                </div>
+
+            </form>
+            </div> 
+            
+            </div>
+         </div> 
+        </div>
+     
+    <!-- <br> -->
+
+
+               <!-- +++++++++++++++++++++++++++++++++++++ emp form end +++++++++++++++++++++++++++++++++++ -->
+
+                        
+
+
+    <div class="deletemodal p-3" id="popup">
+        <header class="py-3">
+           <h3>delete employee</h3>
+        </header>
+        <div class="modalb py-3">
+           <P >do you want delete this employee</P>
+        </div>
+       <div class="mfootr py-3">
+           <button class="cancel" onclick="cancel()">cancel</button>
+           <button class="deleting btn btn-danger " onclick="deleting()">delete</button>
+       </div>
+    </div>
+
+
+<div id="shade" onclick="cancel()"></div>
+
+
+
+    
+
+    <!-- bootstrap js connection -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script src="emp.js"></script>
+    <script src="post.js"></script>
+    <!-- <script src="validation.js"></script> -->
+    <script src="update.js"></script>
+</body>
+</html>
